@@ -1,4 +1,3 @@
-// Animal class
 class Animal {
     private String name;
 
@@ -11,14 +10,12 @@ class Animal {
     }
 }
 
-// Cat class inheriting from Animal
 class Cat extends Animal {
     Cat(String name) {
         super(name);
     }
 }
 
-// House class
 class House {
     private Room room;
     private String address;
@@ -37,7 +34,6 @@ class House {
     }
 }
 
-// Room class
 class Room {
     private String name;
 
@@ -50,7 +46,6 @@ class Room {
     }
 }
 
-// Chef class
 class Chef {
     private String name;
     private Knife knife;
@@ -65,7 +60,6 @@ class Chef {
     }
 }
 
-// Knife class
 class Knife {
     private String name;
 
@@ -78,22 +72,21 @@ class Knife {
     }
 }
 
-// Main class
 public class Main {
     public static void main(String[] args) {
 
         //*is a relationship
         Animal cat = new Cat("Whiskers");
-        cat.makeSound(); // Outputs "Whiskers makes a sound..."
+        cat.makeSound(); 
 
         //*has a relationship
         Room livingRoom = new Room("Living Room");
         House house = new House(livingRoom, "123 Main St.");
-        house.openDoor(); // Outputs "The door to 123 Main St. is open."
-        house.enterRoom(); // Outputs "Entering Living Room."
+        house.openDoor(); 
+        house.enterRoom(); 
 
         //*uses a relationship
         Chef chef = new Chef("Abhi", new Knife("Chef's Knife"));
-        chef.cook(); // Outputs "Abhi is cooking with her Chef's Knife."
+        chef.cook(); 
     }
 }
